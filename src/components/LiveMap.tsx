@@ -74,6 +74,27 @@ const getMappedCategory = (c: any): string => {
   return "other";
 };
 
+// Helper for category-specific fallback images in case photo fails or is placeholder
+const getCategoryFallbackImage = (c: any): string => {
+  const cat = getMappedCategory(c);
+  if (cat === "pothole") {
+    return "https://images.unsplash.com/photo-1599740831244-4161b4df0d76?auto=format&fit=crop&w=600&q=80";
+  }
+  if (cat === "water_leak") {
+    return "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80";
+  }
+  if (cat === "garbage") {
+    return "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80";
+  }
+  if (cat === "streetlight") {
+    return "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&w=600&q=80";
+  }
+  if (cat === "drainage") {
+    return "https://images.unsplash.com/photo-1542013936693-8848e5740a7a?auto=format&fit=crop&w=600&q=80";
+  }
+  return "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80";
+};
+
 // Helper for UI label formatting
 const getCategoryLabel = (c: any, t: (k: string) => string) => {
   if (c.category) {
@@ -569,19 +590,28 @@ export default function LiveMap({ complaints, user, onUpvote }: LiveMapProps) {
                 <div className="space-y-4">
                   
                   {/* Photo evidence preview/thumbnail */}
-                  <div className="relative h-44 rounded-xl overflow-hidden border border-white/5 bg-black/40 flex items-center justify-center">
+                  <div className="relative h-44 rounded-xl overflow-hidden border border-white/5 bg-black/40 flex items-center justify-center font-sans">
                     {selectedComplaint.image_url ? (
                       <img
                         src={selectedComplaint.image_url}
                         alt={selectedComplaint.title}
                         className="w-full h-full object-cover"
                         referrerPolicy="no-referrer"
+                        onError={(e) => {
+                          const target = e.currentTarget;
+                          const fallback = getCategoryFallbackImage(selectedComplaint);
+                          if (target.src !== fallback) {
+                            target.src = fallback;
+                          }
+                        }}
                       />
                     ) : (
-                      <div className="flex flex-col items-center justify-center space-y-2 text-zinc-600">
-                        <MapPin className="w-10 h-10 stroke-[1.5]" />
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-zinc-500">{t("map.noImage")}</span>
-                      </div>
+                      <img
+                        src={getCategoryFallbackImage(selectedComplaint)}
+                        alt={selectedComplaint.title}
+                        className="w-full h-full object-cover opacity-70 filter brightness-90"
+                        referrerPolicy="no-referrer"
+                      />
                     )}
                     
                     {/* Float status & severity badges over the thumbnail */}

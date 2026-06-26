@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Complaint, RoleType } from "../types";
-import { db, OperationType, handleFirestoreError, doc, updateDoc, arrayUnion, arrayRemove } from "../db";
+import { db, OperationType, handleDatabaseError, doc, updateDoc, arrayUnion, arrayRemove } from "../db";
 import { useLanguage } from "./LanguageContext";
 import { 
   CheckCircle2, 
@@ -31,6 +31,36 @@ interface GrievanceTrackerProps {
   currentRole: RoleType;
   onOpenAuth: () => void;
 }
+
+// Helper for category-specific fallback images in case photo fails or is placeholder
+const getCategoryFallbackImage = (c: Complaint): string => {
+  const dept = (c.department || "").toLowerCase();
+  const title = (c.title || "").toLowerCase();
+  const desc = (c.description || "").toLowerCase();
+  
+  const isPothole = dept.includes("road") || dept.includes("pothole") || title.includes("pothole") || desc.includes("pothole");
+  const isWater = dept.includes("water") || dept.includes("sewage") || dept.includes("pipe") || title.includes("water") || desc.includes("water") || title.includes("leak") || desc.includes("leak");
+  const isGarbage = dept.includes("garbage") || dept.includes("sanitation") || dept.includes("waste") || title.includes("garbage") || desc.includes("garbage") || title.includes("trash") || desc.includes("trash");
+  const isLight = dept.includes("light") || dept.includes("electricity") || title.includes("light") || desc.includes("light") || title.includes("wire") || desc.includes("wire");
+  const isDrain = dept.includes("drain") || dept.includes("sewage") || title.includes("drain") || desc.includes("drain");
+  
+  if (isPothole) {
+    return "https://images.unsplash.com/photo-1599740831244-4161b4df0d76?auto=format&fit=crop&w=600&q=80";
+  }
+  if (isWater) {
+    return "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80";
+  }
+  if (isGarbage) {
+    return "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80";
+  }
+  if (isLight) {
+    return "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&w=600&q=80";
+  }
+  if (isDrain) {
+    return "https://images.unsplash.com/photo-1542013936693-8848e5740a7a?auto=format&fit=crop&w=600&q=80";
+  }
+  return "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80";
+};
 
 export default function GrievanceTracker({ complaints, user, currentRole, onOpenAuth }: GrievanceTrackerProps) {
   const { language, t } = useLanguage();
@@ -86,8 +116,8 @@ export default function GrievanceTracker({ complaints, user, currentRole, onOpen
         throw new Error("Failed to submit verification request to backend API");
       }
     } catch (err) {
-      console.warn("Failed backend verification API, falling back to direct Firestore update:", err);
-      // Fallback: Direct Firestore write
+      console.warn("Failed backend verification API, falling back to direct database update:", err);
+      // Fallback: Direct database write
       try {
         const email = user.email || "guest@nagarsevak.sandbox";
         const complaint = complaints.find(c => c.id === complaintId);
@@ -107,9 +137,9 @@ export default function GrievanceTracker({ complaints, user, currentRole, onOpen
           }
         }
       } catch (fErr) {
-        console.error("Verification fallback direct Firestore write failed:", fErr);
+        console.error("Verification fallback direct database write failed:", fErr);
         try {
-          handleFirestoreError(fErr, OperationType.UPDATE, `complaints/${complaintId}`);
+          handleDatabaseError(fErr, OperationType.UPDATE, `complaints/${complaintId}`);
         } catch (e) {
           console.warn("Permission handling complete:", e);
         }
@@ -585,6 +615,13 @@ export default function GrievanceTracker({ complaints, user, currentRole, onOpen
                                         alt="Before" 
                                         className="w-full h-32 object-cover rounded-xl border border-white/5" 
                                         referrerPolicy="no-referrer"
+                                        onError={(e) => {
+                                          const target = e.currentTarget;
+                                          const fallback = getCategoryFallbackImage(complaint);
+                                          if (target.src !== fallback) {
+                                            target.src = fallback;
+                                          }
+                                        }}
                                       />
                                     </div>
                                   )}
@@ -596,6 +633,13 @@ export default function GrievanceTracker({ complaints, user, currentRole, onOpen
                                         alt="After" 
                                         className="w-full h-32 object-cover rounded-xl border border-[#00d4aa]/30 shadow-md" 
                                         referrerPolicy="no-referrer"
+                                        onError={(e) => {
+                                          const target = e.currentTarget;
+                                          const fallback = "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80";
+                                          if (target.src !== fallback) {
+                                            target.src = fallback;
+                                          }
+                                        }}
                                       />
                                     </div>
                                   )}

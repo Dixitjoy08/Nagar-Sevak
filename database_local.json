@@ -751,6 +751,96 @@
       },
       "created_at": "2026-06-26T09:11:32.882Z",
       "updated_at": "2026-06-26T09:11:32.882Z"
+    },
+    {
+      "id": "report_v2ee8s7vh",
+      "title": "Test report",
+      "description": "Test description of a pothole",
+      "category": "pothole",
+      "severity": 3,
+      "status": "filed",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "ward": "Ward 120 (D'Souza Layout)",
+        "zone": "Bengaluru D'Souza",
+        "address": "St. Joseph's Indian High School, 1st Cross Road, D'Souza Layout, Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India"
+      },
+      "jurisdiction": {
+        "body": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+        "contact": "+91-80-0001-4402",
+        "sla_hours": 24,
+        "department": "Road Infrastructure Department",
+        "officer_name": "Ward Assistant Engineer (Roads)",
+        "complaint_portal_url": "https://sahaya.bbmp.gov.in"
+      },
+      "image_url": "https://images.unsplash.com/photo-1599740831244-4161b4df0d76?auto=format&fit=crop&w=600&q=80",
+      "after_image_url": null,
+      "grievance_letter": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Ward Assistant Engineer (Roads),\nRoad Infrastructure Department,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'pothole' - Test report\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** St. Joseph's Indian High School, 1st Cross Road, D'Souza Layout, Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India\n- **Issue Category:** POTHOLE\n- **Reporter's Description:** Test description of a pothole\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **24 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **24-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+      "bilingual_grievance": {
+        "hindi": "### आधिकारिक नागरिक शिकायत पत्र\n\n**सेवा में,**\nमाननीय Ward Assistant Engineer (Roads) कार्यालय,\nRoad Infrastructure Department प्रभाग,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nभारत - 560001।\n\n**विषय:** लंबित समस्या 'pothole' - Test report के संबंध में तत्काल कार्रवाई हेतु।\n\n**संदर्भ:** संवर्धित नागरिक फोटो एवं जीआईएस (GIS) साक्ष्य (पोर्टल: https://sahaya.bbmp.gov.in)।\n\n**दिनांक:** २३ जून, २०२६\n\n**आदरणीय महोदया/महोदय,**\n\nमैं स्थानीय क्षेत्र में व्याप्त एक गंभीर नागरिक समस्या की ओर आपका त्वरित ध्यान आकर्षित करना चाहता हूँ। यह समस्या निम्नलिखित स्थान पर बनी हुई है:\n- **सटीक स्थान/लैंडमार्क:** St. Joseph's Indian High School, 1st Cross Road, D'Souza Layout, Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India\n- **शिकायत का प्रकार:** POTHOLE\n- **शिकायत का विवरण:** Test description of a pothole\n\nहमने इस समस्या की पुष्टि करने वाले सटीक फोटो साक्ष्य संकलित व अपलोड कर दिए हैं। **Bruhat Bengaluru Mahanagara Palike (BBMP)** के आधिकारिक नागरिक चार्टर और शिकायत निवारण नियमावली के तहत, इस विशिष्ट शिकायत के निवारण हेतु अधिकतम सेवा स्तर समझौता (SLA) अवधि **24 घंटे** स्वीकृत है।\n\nअतः Ward 120 (D'Souza Layout) के एक सजग नागरिक के रूप में, मेरा आपसे विनम्र निवेदन है कि जनहित, जन सुरक्षा और सुगम यातायात को ध्यान में रखते हुए इस **24-घंटे** की तय समय सीमा के भीतर तत्काल मरम्मत कार्य या उचित कार्रवाई सुनिश्चित करने के लिए संबंधित कर्मियों को निर्देशित करें।\n\nसहयोग हेतु कोटिशः धन्यवाद।\n\n**भवदीय/भवदीया,**\nपंजीकृत नागरिक, नगरसेवक (NagarSevak) मंच।",
+        "english": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Ward Assistant Engineer (Roads),\nRoad Infrastructure Department,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'pothole' - Test report\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** St. Joseph's Indian High School, 1st Cross Road, D'Souza Layout, Shanthala Nagar, Ashokanagar, Bengaluru Central City Corporation, Bengaluru, Bangalore North, Bengaluru Urban, Karnataka, 560001, India\n- **Issue Category:** POTHOLE\n- **Reporter's Description:** Test description of a pothole\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **24 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **24-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform."
+      },
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 1,
+        "user_ids": [
+          "test_user_123"
+        ]
+      },
+      "similar_reports": [
+        {
+          "id": "dup_ilrm7e162",
+          "title": "Test multipart title",
+          "analysis": "Both reports are clearly test submissions regarding a pothole, utilizing nearly identical placeholder text ('Test multipart description of a pothole' vs 'Test description of a pothole') in the same area. They represent the same duplicate test entry.",
+          "image_url": "/uploads/image-1782467524927-658381962.jpg",
+          "created_at": "2026-06-26T09:52:12.617Z",
+          "created_by": "test_user_123",
+          "description": "Test multipart description of a pothole"
+        }
+      ],
+      "comments": [],
+      "created_by": "anonymous_citizen",
+      "visual_description": null,
+      "created_at": "2026-06-26T09:51:49.618+00:00",
+      "updated_at": "2026-06-26T09:52:12.617+00:00"
+    },
+    {
+      "title": "Test logging pothole title",
+      "description": "A secondary description for verification",
+      "category": "pothole",
+      "severity": 3,
+      "status": "filed",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "address": "Test address",
+        "ward": "Ward 120 (D'Souza Layout)",
+        "zone": "Bengaluru D'Souza"
+      },
+      "jurisdiction": {
+        "body": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+        "department": "Road Infrastructure Department",
+        "officer_name": "Ward Assistant Engineer (Roads)",
+        "contact": "+91-80-0001-4402",
+        "sla_hours": 24,
+        "complaint_portal_url": "https://sahaya.bbmp.gov.in"
+      },
+      "image_url": "/uploads/image-1782467849721-472259353.jpg",
+      "grievance_letter": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Ward Assistant Engineer (Roads),\nRoad Infrastructure Department,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'pothole' - Test logging pothole title\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Test address\n- **Issue Category:** POTHOLE\n- **Reporter's Description:** A secondary description for verification\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **24 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **24-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+      "bilingual_grievance": {
+        "english": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Ward Assistant Engineer (Roads),\nRoad Infrastructure Department,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'pothole' - Test logging pothole title\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Test address\n- **Issue Category:** POTHOLE\n- **Reporter's Description:** A secondary description for verification\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **24 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **24-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+        "hindi": "### आधिकारिक नागरिक शिकायत पत्र\n\n**सेवा में,**\nमाननीय Ward Assistant Engineer (Roads) कार्यालय,\nRoad Infrastructure Department प्रभाग,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nभारत - 560001।\n\n**विषय:** लंबित समस्या 'pothole' - Test logging pothole title के संबंध में तत्काल कार्रवाई हेतु।\n\n**संदर्भ:** संवर्धित नागरिक फोटो एवं जीआईएस (GIS) साक्ष्य (पोर्टल: https://sahaya.bbmp.gov.in)।\n\n**दिनांक:** २३ जून, २०२६\n\n**आदरणीय महोदया/महोदय,**\n\nमैं स्थानीय क्षेत्र में व्याप्त एक गंभीर नागरिक समस्या की ओर आपका त्वरित ध्यान आकर्षित करना चाहता हूँ। यह समस्या निम्नलिखित स्थान पर बनी हुई है:\n- **सटीक स्थान/लैंडमार्क:** Test address\n- **शिकायत का प्रकार:** POTHOLE\n- **शिकायत का विवरण:** A secondary description for verification\n\nहमने इस समस्या की पुष्टि करने वाले सटीक फोटो साक्ष्य संकलित व अपलोड कर दिए हैं। **Bruhat Bengaluru Mahanagara Palike (BBMP)** के आधिकारिक नागरिक चार्टर और शिकायत निवारण नियमावली के तहत, इस विशिष्ट शिकायत के निवारण हेतु अधिकतम सेवा स्तर समझौता (SLA) अवधि **24 घंटे** स्वीकृत है।\n\nअतः Ward 120 (D'Souza Layout) के एक सजग नागरिक के रूप में, मेरा आपसे विनम्र निवेदन है कि जनहित, जन सुरक्षा और सुगम यातायात को ध्यान में रखते हुए इस **24-घंटे** की तय समय सीमा के भीतर तत्काल मरम्मत कार्य या उचित कार्रवाई सुनिश्चित करने के लिए संबंधित कर्मियों को निर्देशित करें।\n\nसहयोग हेतु कोटिशः धन्यवाद।\n\n**भवदीय/भवदीया,**\nपंजीकृत नागरिक, नगरसेवक (NagarSevak) मंच।"
+      },
+      "created_by": "test_user_123",
+      "id": "report_h9uo0xqnj",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 0,
+        "user_ids": []
+      },
+      "created_at": "2026-06-26T09:57:40.025Z",
+      "updated_at": "2026-06-26T09:57:40.025Z"
     }
   ],
   "users": [
@@ -861,11 +951,25 @@
       "id": "test_user_123",
       "name": "Citizen test",
       "email": "test_user_123@nagarsevak.sandbox",
-      "civic_score": 120,
+      "civic_score": 110,
       "badges": [
         "Initiate Warden"
       ],
-      "reports_filed": 2,
+      "reports_filed": 3,
+      "reports_verified": 0,
+      "ward": "Ward 42",
+      "streak": 1,
+      "last_action_date": "2026-06-26"
+    },
+    {
+      "id": "anonymous_citizen",
+      "name": "Citizen anon",
+      "email": "anonymous_citizen@nagarsevak.sandbox",
+      "civic_score": 110,
+      "badges": [
+        "Initiate Warden"
+      ],
+      "reports_filed": 1,
       "reports_verified": 0,
       "ward": "Ward 42",
       "streak": 1,

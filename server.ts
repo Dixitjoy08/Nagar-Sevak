@@ -34,6 +34,16 @@ if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir, { recursive: true });
 }
 
+// Global server logger helper
+function logErrorToFile(context: string, err: any) {
+  try {
+    const logMsg = `[${new Date().toISOString()}] ${context}: ${err instanceof Error ? err.stack || err.message : String(err)}\n`;
+    fs.appendFileSync(path.join(process.cwd(), "server_errors.log"), logMsg);
+  } catch (logErr) {
+    console.error("Failed to write to log file:", logErr);
+  }
+}
+
 // Multer storage setup
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -105,6 +115,23 @@ Concerned Citizen of NagarSevak`;
 async function startServer() {
   const app = express();
   const PORT = 3000;
+
+  // Custom logging middleware for API requests
+  app.use((req, res, next) => {
+    if (req.path.startsWith("/api")) {
+      const start = Date.now();
+      res.on("finish", () => {
+        const duration = Date.now() - start;
+        try {
+          const logMsg = `[${new Date().toISOString()}] ${req.method} ${req.originalUrl} - Status: ${res.statusCode} - Duration: ${duration}ms\n`;
+          fs.appendFileSync(path.join(process.cwd(), "server_errors.log"), logMsg);
+        } catch (err) {
+          console.error("Failed to write request log to file:", err);
+        }
+      });
+    }
+    next();
+  });
 
   // Middleware
   app.use(express.json({ limit: '10mb' }));
@@ -300,6 +327,7 @@ async function startServer() {
       res.status(201).json(createdReport);
     } catch (err: any) {
       console.error("Error creating report:", err);
+      logErrorToFile("Error creating report", err);
       res.status(500).json({ error: err.message || "Failed to create report" });
     }
   });
@@ -895,6 +923,7 @@ async function startServer() {
       });
     } catch (err: any) {
       console.error("Error in describe-image endpoint:", err);
+      logErrorToFile("Error in describe-image endpoint", err);
       res.status(500).json({ error: err.message || "Failed to generate description from image" });
     }
   });
@@ -910,6 +939,7 @@ async function startServer() {
       res.json({ response: responseText });
     } catch (err: any) {
       console.error("Error in chat endpoint:", err);
+      logErrorToFile("Error in chat endpoint", err);
       res.status(500).json({ error: err.message || "Failed to complete chat task" });
     }
   });
