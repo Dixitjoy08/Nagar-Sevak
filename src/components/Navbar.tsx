@@ -1,6 +1,6 @@
 import React from "react";
 import { User, LogOut, Milestone, Shield, RefreshCw } from "lucide-react";
-import { auth, signOut } from "../firebase";
+import { auth, signOut } from "../db";
 import { RoleType } from "../types";
 
 interface NavbarProps {

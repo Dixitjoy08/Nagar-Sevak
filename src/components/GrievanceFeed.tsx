@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Complaint, Comment, RoleType } from "../types";
-import { db, OperationType, handleFirestoreError, doc, updateDoc } from "../firebase";
+import { db, OperationType, handleFirestoreError, doc, updateDoc } from "../db";
 import { 
   Flame, 
   MapPin, 

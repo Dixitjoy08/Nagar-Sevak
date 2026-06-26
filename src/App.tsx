@@ -3,7 +3,7 @@ import {
   auth, 
   db, 
   OperationType, 
-  handleFirestoreError,
+  handleDatabaseError,
   onAuthStateChanged, 
   signOut,
   collection, 
@@ -12,7 +12,7 @@ import {
   addDoc, 
   doc, 
   updateDoc 
-} from "./firebase";
+} from "./db";
 import Navbar from "./components/Navbar";
 import { useLanguage } from "./components/LanguageContext";
 import StatsDashboard from "./components/StatsDashboard";
@@ -58,8 +58,8 @@ export default function App() {
 
   // Authenticate session listener
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (firebaseUser) => {
-      setUser(firebaseUser);
+    const unsubscribe = onAuthStateChanged(auth, (u) => {
+      setUser(u);
       setAuthLoading(false);
     });
     return () => unsubscribe();
@@ -112,7 +112,7 @@ export default function App() {
       }
 
       try {
-        handleFirestoreError(error, OperationType.GET, "complaints");
+        handleDatabaseError(error, OperationType.GET, "complaints");
       } catch (e) {
         console.warn("Permission wrapper processed:", e);
       }
@@ -138,7 +138,7 @@ export default function App() {
           } catch (err) {
             console.error("Failed seeding database entry:", err);
             try {
-              handleFirestoreError(err, OperationType.CREATE, "complaints");
+              handleDatabaseError(err, OperationType.CREATE, "complaints");
             } catch (e) {
               console.warn("Seeding permission check wrapper processed:", e);
             }

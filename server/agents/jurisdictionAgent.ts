@@ -31,7 +31,7 @@ export interface GroundedJurisdiction {
 }
 
 /**
- * Runs the Python jurisdiction auditor or falls back to Node-native Gemini search grounding.
+ * Resolves municipal jurisdiction details. Calls Node-native Gemini search grounding directly.
  */
 export async function getJurisdictionDetails(
   lat: number,
@@ -40,33 +40,7 @@ export async function getJurisdictionDetails(
   title: string = "",
   description: string = ""
 ): Promise<GroundedJurisdiction> {
-  // First, try to query via python3 server/agents/jurisdiction.py
-  return new Promise<GroundedJurisdiction>((resolve) => {
-    const scriptPath = path.join(process.cwd(), "server", "agents", "jurisdiction.py");
-    const cmd = `python3 "${scriptPath}" ${lat} ${lng} "${category.replace(/"/g, '\\"')}" "${title.replace(/"/g, '\\"')}" "${description.replace(/"/g, '\\"')}"`;
-    
-    console.log(`Executing python jurisdiction CLI: ${cmd}`);
-    exec(cmd, async (error, stdout, stderr) => {
-      if (!error && stdout) {
-        try {
-          const parsed = JSON.parse(stdout.trim());
-          if (parsed && !parsed.error && parsed.body_name) {
-            console.log("Success resolving jurisdiction via python script:", parsed);
-            resolve(parsed as GroundedJurisdiction);
-            return;
-          }
-        } catch (parseError) {
-          console.warn("Could not parse Python script stdout JSON output, falling back to TS. Stdout:", stdout);
-        }
-      } else {
-        console.warn("Python execution not available or reported stderr. Falling back to TypeScript handler.", stderr);
-      }
-
-      // FALLBACK: Native TS Search Grounding with Gemini
-      const details = await getJurisdictionDetailsTS(lat, lng, category, title, description);
-      resolve(details);
-    });
-  });
+  return getJurisdictionDetailsTS(lat, lng, category, title, description);
 }
 
 /**
@@ -137,8 +111,13 @@ Prepare your answer. Output MUST be ONLY a single JSON object with the exact key
       pincode: geoInfo.pincode
     };
 
-  } catch (err) {
-    console.error("TypeScript search grounding failed, using heuristic provider:", err);
+  } catch (err: any) {
+    const isQuota = String(err?.message || err).includes("RESOURCE_EXHAUSTED") || String(err?.message || err).includes("429");
+    if (isQuota) {
+      console.warn("TypeScript search grounding: API quota/rate limit reached. Applying high-quality municipal heuristics fallback.");
+    } else {
+      console.warn("TypeScript search grounding skipped/failed, applying heuristics:", err?.message || err);
+    }
     return generateLocalFallback(geoInfo, category);
   }
 }

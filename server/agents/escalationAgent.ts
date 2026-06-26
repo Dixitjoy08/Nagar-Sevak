@@ -18,43 +18,7 @@ export async function generateBilingualEscalation(
   report: Report,
   neighbors: Report[] = []
 ): Promise<BilingualEscalationDraft> {
-  const payload = {
-    level,
-    report,
-    neighbors
-  };
-
-  return new Promise<BilingualEscalationDraft>((resolve) => {
-    const scriptPath = path.join(process.cwd(), "server", "agents", "escalation.py");
-    const payloadStr = JSON.stringify(payload);
-    
-    const cmd = `python3 "${scriptPath}"`;
-    const child = exec(cmd, (error, stdout, stderr) => {
-      if (!error && stdout) {
-        try {
-          const parsed = JSON.parse(stdout.trim());
-          if (parsed && parsed.english && parsed.hindi) {
-            console.log(`Success generating L${level} bilingual escalation letter via Python agent.`);
-            resolve(parsed as BilingualEscalationDraft);
-            return;
-          }
-        } catch (parseError) {
-          console.warn("Could not parse escalation.py JSON output. Falling back to TS template generator.", stdout);
-        }
-      } else {
-        console.warn("Python escalation execution reported code/stderr errors. Executing fallback template:", stderr);
-      }
-
-      // TS native fallback
-      resolve(generateFallbackBilingualEscalationTS(level, report, neighbors));
-    });
-
-    // Write input payload specifically to stdin
-    if (child.stdin) {
-      child.stdin.write(payloadStr);
-      child.stdin.end();
-    }
-  });
+  return generateFallbackBilingualEscalationTS(level, report, neighbors);
 }
 
 function generateFallbackBilingualEscalationTS(

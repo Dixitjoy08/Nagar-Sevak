@@ -5,7 +5,7 @@ import {
   createUserWithEmailAndPassword, 
   signInAnonymously,
   updateProfile
-} from "../firebase";
+} from "../db";
 import { User, LogIn, UserPlus, Milestone, HelpCircle } from "lucide-react";
 
 interface AuthModalProps {

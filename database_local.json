@@ -1,0 +1,875 @@
+{
+  "reports": [
+    {
+      "id": "report_001",
+      "title": "Severe Road Disruption: Huge Pothole Circle",
+      "description": "A wide pothole block near the intersection has caused three motorbike slips in the last 48 hours. Water logging makes it invisible during nighttime.",
+      "category": "pothole",
+      "severity": 4,
+      "status": "in_progress",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "address": "Outer Ring Rd near Shell Station, Sector 2",
+        "ward": "Ward 42",
+        "zone": "Zone East"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Roads & Traffic Planning",
+        "officer_name": "Assistant Engineer V. Deshmukh",
+        "contact": "+91-80-2139-4402",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [
+        {
+          "level": "l1",
+          "timestamp": "2026-06-25T09:07:38.092Z",
+          "reason": "SLA threshold near breech of 24 hours without field deployment",
+          "assignedOfficer": "Engineer V. Deshmukh",
+          "remarks": "Assigned to Ward 42 repair unit."
+        }
+      ],
+      "community_verifications": {
+        "count": 5,
+        "user_ids": [
+          "user_ananya",
+          "user_amit"
+        ]
+      },
+      "created_by": "user_rajesh",
+      "created_at": "2026-06-24T21:07:38.092Z",
+      "updated_at": "2026-06-25T09:07:38.092Z"
+    },
+    {
+      "id": "report_002",
+      "title": "Broken Streetlamp causing safety hazard",
+      "description": "Two major high-sodium streetlights on Lane 4 are completely dark, enabling anti-social activities and making walks risky for senior residents.",
+      "category": "streetlight",
+      "severity": 3,
+      "status": "filed",
+      "location": {
+        "lat": 12.9689,
+        "lng": 77.6012,
+        "address": "Lane 4, Green Garden Layout Block C",
+        "ward": "Ward 17",
+        "zone": "Zone Central"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Electricity Board",
+        "officer_name": "Electrical Inspector M. K. Rao",
+        "contact": "+91-80-2139-4405",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 2,
+        "user_ids": [
+          "user_rajesh"
+        ]
+      },
+      "created_by": "user_ananya",
+      "created_at": "2026-06-26T05:07:38.092Z",
+      "updated_at": "2026-06-26T05:07:38.092Z"
+    },
+    {
+      "id": "report_003",
+      "title": "Massive Garbage Heap blocking pedestrian path",
+      "description": "Over 500kg of wet and dry garbage piled outside the civic community center. Breeds flies and smells toxic.",
+      "category": "garbage",
+      "severity": 5,
+      "status": "resolved",
+      "location": {
+        "lat": 12.9801,
+        "lng": 77.5899,
+        "address": "Civic center boundary, Main Bus Stand Rd",
+        "ward": "Ward 12",
+        "zone": "Zone North"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Sanitation & Waste Management",
+        "officer_name": "Sanitary Chief S. K. Patil",
+        "contact": "+91-80-2139-4409",
+        "sla_hours": 12
+      },
+      "image_url": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80",
+      "after_image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 8,
+        "user_ids": [
+          "user_rajesh",
+          "user_ananya"
+        ]
+      },
+      "created_by": "user_amit",
+      "created_at": "2026-06-24T09:07:38.093Z",
+      "updated_at": "2026-06-25T21:07:38.093Z",
+      "resolved_at": "2026-06-25T21:07:38.093Z"
+    },
+    {
+      "id": "report_004",
+      "title": "Major Main Line Water Leak on Highway cross",
+      "description": "Water has been spraying 10 feet high from a municipal supply joint pipe since early morning, making road traction slippery and wasting thousands of liters.",
+      "category": "water_leak",
+      "severity": 4,
+      "status": "acknowledged",
+      "location": {
+        "lat": 12.9582,
+        "lng": 77.5721,
+        "address": "Near Metro Station Pillar 124, West Chord Rd",
+        "ward": "Ward 10",
+        "zone": "Zone West"
+      },
+      "jurisdiction": {
+        "body": "Water Supply & Sewerage Board",
+        "department": "Water Distribution Maintenance",
+        "officer_name": "Sub-Divisional Engineer Suresh Gowda",
+        "contact": "+91-80-2349-1100",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1542013936693-8848e5740a7a?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 3,
+        "user_ids": [
+          "user_vikram",
+          "user_sneha"
+        ]
+      },
+      "created_by": "user_priya",
+      "created_at": "2026-06-26T03:07:38.093Z",
+      "updated_at": "2026-06-26T06:07:38.093Z"
+    },
+    {
+      "id": "report_005",
+      "title": "Clogged Underground Drainage causing waste backflow",
+      "description": "Sanitary sewer line has been heavily clogged with silt and plastic trash. Drainage backflow has filled the front courtyard of four block houses.",
+      "category": "drainage",
+      "severity": 4,
+      "status": "escalated_l1",
+      "location": {
+        "lat": 12.9815,
+        "lng": 77.5912,
+        "address": "Commercial Street Cross Lane B",
+        "ward": "Ward 45",
+        "zone": "Zone North"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Sewage & Drainage Systems",
+        "officer_name": "Senior Super S. K. Sahoo",
+        "contact": "+91-80-2139-4411",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [
+        {
+          "level": "l1",
+          "timestamp": "2026-06-25T21:07:38.093Z",
+          "reason": "Critical health hazard with zero response from local ward sanitary team in 24 hours",
+          "assignedOfficer": "Sanitary Chief S. K. Sahoo",
+          "remarks": "Escalated for emergency vacuum-sucking machine dispatch."
+        }
+      ],
+      "community_verifications": {
+        "count": 6,
+        "user_ids": [
+          "user_priya",
+          "user_rajesh",
+          "user_sneha"
+        ]
+      },
+      "created_by": "user_sneha",
+      "created_at": "2026-06-24T21:07:38.093Z",
+      "updated_at": "2026-06-25T21:07:38.093Z"
+    },
+    {
+      "id": "report_006",
+      "title": "Illegal Encroachment of Pedestrian Footpath",
+      "description": "Temporary commercial steel stalls have completely blocked 50 meters of the public walking track on Brigade Rd, pushing school children into running traffic.",
+      "category": "encroachment",
+      "severity": 5,
+      "status": "escalated_l2",
+      "location": {
+        "lat": 12.9644,
+        "lng": 77.5821,
+        "address": "Brigade Road Pedestrian Walkway, Near Metro Exit",
+        "ward": "Ward 25",
+        "zone": "Zone Central"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Encroachment Clearance Department",
+        "officer_name": "Assistant Commissioner N. L. Prasad",
+        "contact": "+91-80-2139-4425",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1532372320978-9b4d6a3a854c?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [
+        {
+          "level": "l1",
+          "timestamp": "2026-06-24T17:07:38.093Z",
+          "reason": "Field inspection delay by Ward 25 supervisor",
+          "assignedOfficer": "Town Planner M. Dev",
+          "remarks": "Recommended immediate clearance notice issuance."
+        },
+        {
+          "level": "l2",
+          "timestamp": "2026-06-25T17:07:38.093Z",
+          "reason": "Encroachers refused clearance; local police assistance requisitioned",
+          "assignedOfficer": "Assistant Commissioner N. L. Prasad",
+          "remarks": "Joint clearance squad eviction set for tomorrow."
+        }
+      ],
+      "community_verifications": {
+        "count": 11,
+        "user_ids": [
+          "user_priya",
+          "user_rajesh",
+          "user_ananya",
+          "user_sneh"
+        ]
+      },
+      "created_by": "user_sneha",
+      "created_at": "2026-06-24T09:07:38.093Z",
+      "updated_at": "2026-06-25T17:07:38.093Z"
+    },
+    {
+      "id": "report_007",
+      "title": "Severe MG Road Cave-in & Pothole Cluster",
+      "description": "Major cave-in under the metro line support structure has developed, spanning 5 feet wide and 2 feet deep. Severely threatening road safety.",
+      "category": "pothole",
+      "severity": 5,
+      "status": "escalated_l3",
+      "location": {
+        "lat": 12.9731,
+        "lng": 77.5991,
+        "address": "MG Road Junction, Opp. Parade Grounds",
+        "ward": "Ward 42",
+        "zone": "Zone Central"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Road Maintenance Division 1",
+        "officer_name": "Chief Municipal Commissioner G. Raman",
+        "contact": "+91-80-2139-1000",
+        "sla_hours": 12
+      },
+      "image_url": "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [
+        {
+          "level": "l1",
+          "timestamp": "2026-06-25T11:07:38.093Z",
+          "reason": "Critical safety hazard in prestigious high-traffic lane",
+          "assignedOfficer": "Assistant Engineer V. Deshmukh",
+          "remarks": "Demarcated hazard safety cones."
+        },
+        {
+          "level": "l2",
+          "timestamp": "2026-06-25T19:07:38.093Z",
+          "reason": "Structural concrete reinforcement requirements beyond standard repair crew",
+          "assignedOfficer": "Joint Director H. Shastry",
+          "remarks": "Advanced repairs requested from structural contracting division."
+        },
+        {
+          "level": "l3",
+          "timestamp": "2026-06-26T05:07:38.093Z",
+          "reason": "Public safety concern escalated to peak administrative office due to soil settling under columns",
+          "assignedOfficer": "Chief Municipal Commissioner G. Raman",
+          "remarks": "Direct coordination with Metro safety authority launched."
+        }
+      ],
+      "community_verifications": {
+        "count": 19,
+        "user_ids": [
+          "user_rajesh",
+          "user_ananya",
+          "user_amit",
+          "user_priya",
+          "user_sneha",
+          "user_rahul",
+          "user_karan"
+        ]
+      },
+      "created_by": "user_rajesh",
+      "created_at": "2026-06-25T09:07:38.093Z",
+      "updated_at": "2026-06-26T05:07:38.093Z"
+    },
+    {
+      "id": "report_008",
+      "title": "Enormous pile of decomposing organic garbage",
+      "description": "Indiranagar restaurant lane garbage pile has been completely abandoned by cleaners. Heavy rain has caused rot, spreading foul fluids on the footpath.",
+      "category": "garbage",
+      "severity": 4,
+      "status": "pending_verification",
+      "location": {
+        "lat": 12.9772,
+        "lng": 77.6114,
+        "address": "Indiranagar 100 Feet Rd, Block A cross",
+        "ward": "Ward 31",
+        "zone": "Zone East"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Solid Waste Management Division",
+        "officer_name": "Inspector H. K. Gowda",
+        "contact": "+91-80-2139-4409",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 4,
+        "user_ids": [
+          "user_rahul",
+          "user_amit"
+        ]
+      },
+      "created_by": "user_rahul",
+      "created_at": "2026-06-25T21:07:38.093Z",
+      "updated_at": "2026-06-26T08:07:38.093Z"
+    },
+    {
+      "id": "report_009",
+      "title": "Wobbly, rusted street lamp pole ready to fall",
+      "description": "Main electrical streetlight pole near Jayanagar park has rusted completely at the base. It sways alarmingly in high winds, threatening kids playing in the park.",
+      "category": "streetlight",
+      "severity": 4,
+      "status": "acknowledged",
+      "location": {
+        "lat": 12.9512,
+        "lng": 77.5684,
+        "address": "Jayanagar 4th Block, 9th Main Beside Civic Park",
+        "ward": "Ward 12",
+        "zone": "Zone South"
+      },
+      "jurisdiction": {
+        "body": "Bangalore Electricity Board",
+        "department": "Distribution Poles Maintenances",
+        "officer_name": "Superintendent R. S. Swamy",
+        "contact": "+91-80-2544-3200",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 2,
+        "user_ids": [
+          "user_amit"
+        ]
+      },
+      "created_by": "user_amit",
+      "created_at": "2026-06-25T19:07:38.093Z",
+      "updated_at": "2026-06-25T23:07:38.093Z"
+    },
+    {
+      "id": "report_010",
+      "title": "Resolved: Drinking water supply pipe crack sealed",
+      "description": "Severe clean drinking water leakage has been successfully repaired and the road patch cemented back after rapid response reporting.",
+      "category": "water_leak",
+      "severity": 3,
+      "status": "resolved",
+      "location": {
+        "lat": 12.9912,
+        "lng": 77.5541,
+        "address": "Malleshwaram 15th Cross Lane, Ward 10",
+        "ward": "Ward 10",
+        "zone": "Zone West"
+      },
+      "jurisdiction": {
+        "body": "Water Supply & Sewerage Board",
+        "department": "Water Distribution Maintenance",
+        "officer_name": "Engineer Suresh Gowda",
+        "contact": "+91-80-2349-1100",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1542013936693-8848e5740a7a?auto=format&fit=crop&w=600&q=80",
+      "after_image_url": "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 7,
+        "user_ids": [
+          "user_vikram",
+          "user_rajesh",
+          "user_ananya"
+        ]
+      },
+      "created_by": "user_vikram",
+      "created_at": "2026-06-24T21:07:38.093Z",
+      "updated_at": "2026-06-25T15:07:38.093Z",
+      "resolved_at": "2026-06-25T15:07:38.093Z"
+    },
+    {
+      "id": "report_011",
+      "title": "Open drainage manhole overflowing toxic muck",
+      "description": "The concrete cover of the sewer maintenance pit was fractured and collapsed. Filthy sewerage is pouring onto Koramangala block streets.",
+      "category": "drainage",
+      "severity": 5,
+      "status": "in_progress",
+      "location": {
+        "lat": 12.9862,
+        "lng": 77.6189,
+        "address": "Koramangala 80 Feet Road, block 3 near center",
+        "ward": "Ward 17",
+        "zone": "Zone South"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Sewage & Drainage Systems",
+        "officer_name": "Assistant Engineer N. Prasad",
+        "contact": "+91-80-2139-4411",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 5,
+        "user_ids": [
+          "user_ananya",
+          "user_sneha"
+        ]
+      },
+      "created_by": "user_ananya",
+      "created_at": "2026-06-26T01:07:38.093Z",
+      "updated_at": "2026-06-26T04:07:38.093Z"
+    },
+    {
+      "id": "report_012",
+      "title": "Illegal fencing of civic park entrance",
+      "description": "High metal fencing has been erected privately across 20% of the civic community park gate, forcing children to squeeze through a tiny side opening.",
+      "category": "encroachment",
+      "severity": 3,
+      "status": "filed",
+      "location": {
+        "lat": 12.9542,
+        "lng": 77.5891,
+        "address": "HSR Layout Sector 4, near central playground park",
+        "ward": "Ward 25",
+        "zone": "Zone South"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Encroachment Clearance Department",
+        "officer_name": "Town Planner M. Dev",
+        "contact": "+91-80-2139-4425",
+        "sla_hours": 72
+      },
+      "image_url": "https://images.unsplash.com/photo-1532372320978-9b4d6a3a854c?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 3,
+        "user_ids": [
+          "user_sneha",
+          "user_rajesh"
+        ]
+      },
+      "created_by": "user_sneha",
+      "created_at": "2026-06-26T07:07:38.093Z",
+      "updated_at": "2026-06-26T07:07:38.093Z"
+    },
+    {
+      "id": "report_013",
+      "title": "Deep Pothole Grid under flyover crossing",
+      "description": "A series of 5 sharp, deep potholes are present under the flyover underpass, disrupting driving and causing severe peak-hour traffic backlogs.",
+      "category": "pothole",
+      "severity": 3,
+      "status": "acknowledged",
+      "location": {
+        "lat": 12.9621,
+        "lng": 77.6042,
+        "address": "Domlur Flyover Underpass, Old Airport Rd",
+        "ward": "Ward 17",
+        "zone": "Zone East"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Road Maintenance Division 1",
+        "officer_name": "Assistant Engineer V. Deshmukh",
+        "contact": "+91-80-2139-4402",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1515162305285-0293e4767cc2?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 4,
+        "user_ids": [
+          "user_priya",
+          "user_rajesh"
+        ]
+      },
+      "created_by": "user_priya",
+      "created_at": "2026-06-25T21:07:38.093Z",
+      "updated_at": "2026-06-26T03:07:38.093Z"
+    },
+    {
+      "id": "report_014",
+      "title": "Damaged high-mast stadium street lamp blinking",
+      "description": "The main stadium road high-mast lamp is blinking rapidly like a strobe light, causing extreme visual strain and driver distractions.",
+      "category": "streetlight",
+      "severity": 3,
+      "status": "in_progress",
+      "location": {
+        "lat": 12.9711,
+        "lng": 77.5784,
+        "address": "Richmond Road opp. Football Stadium Entrance",
+        "ward": "Ward 42",
+        "zone": "Zone Central"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Electricity Board",
+        "officer_name": "Electrical Inspector M. K. Rao",
+        "contact": "+91-80-2139-4405",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1509024644558-2f56ce76c490?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 3,
+        "user_ids": [
+          "user_karan",
+          "user_rajesh"
+        ]
+      },
+      "created_by": "user_karan",
+      "created_at": "2026-06-25T15:07:38.093Z",
+      "updated_at": "2026-06-25T21:07:38.093Z"
+    },
+    {
+      "id": "report_015",
+      "title": "Unattended Commercial Plastics Dump in market lane",
+      "description": "Tons of commercial plastic packing material have been dumped by wholesalers onto the market sidewalk, blocking shopping entry corridors.",
+      "category": "garbage",
+      "severity": 4,
+      "status": "in_progress",
+      "location": {
+        "lat": 12.9798,
+        "lng": 77.5954,
+        "address": "Shivaji Nagar Bus Stand Alley, Commercial Zone",
+        "ward": "Ward 45",
+        "zone": "Zone North"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Sanitation & Waste Management",
+        "officer_name": "Sanitary Chief S. K. Patil",
+        "contact": "+91-80-2139-4409",
+        "sla_hours": 24
+      },
+      "image_url": "https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 5,
+        "user_ids": [
+          "user_priya",
+          "user_rajesh"
+        ]
+      },
+      "created_by": "user_priya",
+      "created_at": "2026-06-25T13:07:38.093Z",
+      "updated_at": "2026-06-25T23:07:38.093Z"
+    },
+    {
+      "id": "report_016",
+      "title": "Household pipeline leakage flooded walkway",
+      "description": "A private household pipe feeding to a rooftop storage tank cracked, spilling non-stop clean water out of the balcony onto the narrow street below.",
+      "category": "water_leak",
+      "severity": 2,
+      "status": "filed",
+      "location": {
+        "lat": 12.9692,
+        "lng": 77.6201,
+        "address": "Indiranagar 12th Main cross, residential lane",
+        "ward": "Ward 31",
+        "zone": "Zone East"
+      },
+      "jurisdiction": {
+        "body": "Water Supply & Sewerage Board",
+        "department": "Water Distribution Maintenance",
+        "officer_name": "Engineer Suresh Gowda",
+        "contact": "+91-80-2349-1100",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1542013936693-8848e5740a7a?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 1,
+        "user_ids": [
+          "user_rahul"
+        ]
+      },
+      "created_by": "user_rahul",
+      "created_at": "2026-06-26T08:07:38.093Z",
+      "updated_at": "2026-06-26T08:07:38.093Z"
+    },
+    {
+      "id": "report_017",
+      "title": "Stormwater drain successfully desilted",
+      "description": "The primary storm water channel has been cleaned before monsoon rains. All silt has been removed to allow free drainage flow.",
+      "category": "drainage",
+      "severity": 4,
+      "status": "resolved",
+      "location": {
+        "lat": 12.9554,
+        "lng": 77.5712,
+        "address": "Banashankari 2nd Stage, near main ring road",
+        "ward": "Ward 12",
+        "zone": "Zone South"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Sewage & Drainage Systems",
+        "officer_name": "Sanitary Chief S. K. Patil",
+        "contact": "+91-80-2139-4409",
+        "sla_hours": 48
+      },
+      "image_url": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=600&q=80",
+      "after_image_url": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 9,
+        "user_ids": [
+          "user_amit",
+          "user_rajesh",
+          "user_ananya",
+          "user_priya"
+        ]
+      },
+      "created_by": "user_amit",
+      "created_at": "2026-06-24T09:07:38.093Z",
+      "updated_at": "2026-06-26T03:07:38.093Z",
+      "resolved_at": "2026-06-26T03:07:38.093Z"
+    },
+    {
+      "id": "report_018",
+      "title": "Illegal roadside vehicle service shop on corner",
+      "description": "An auto repair shop operator is using the primary turning corner sidewalk to store dismantled vehicles and waste motor oil.",
+      "category": "encroachment",
+      "severity": 3,
+      "status": "acknowledged",
+      "location": {
+        "lat": 12.9882,
+        "lng": 77.5921,
+        "address": "Yeswanthpur Market lane crossing, near station",
+        "ward": "Ward 10",
+        "zone": "Zone North"
+      },
+      "jurisdiction": {
+        "body": "NagarSevak Municipal Corp",
+        "department": "Encroachment Clearance Department",
+        "officer_name": "Town Planner M. Dev",
+        "contact": "+91-80-2139-4425",
+        "sla_hours": 72
+      },
+      "image_url": "https://images.unsplash.com/photo-1532372320978-9b4d6a3a854c?auto=format&fit=crop&w=600&q=80",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 2,
+        "user_ids": [
+          "user_vikram"
+        ]
+      },
+      "created_by": "user_vikram",
+      "created_at": "2026-06-25T23:07:38.093Z",
+      "updated_at": "2026-06-26T04:07:38.093Z"
+    },
+    {
+      "title": "Dangerous hanging wires",
+      "description": "Hanging power wires near my house represent an extreme hazard.",
+      "category": "streetlight",
+      "severity": 4,
+      "status": "filed",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "address": "Sector 3, Bangalore",
+        "ward": "Ward 120 (D'Souza Layout)",
+        "zone": "Bengaluru D'Souza"
+      },
+      "jurisdiction": {
+        "body": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+        "department": "Electrical Division",
+        "officer_name": "Electrical Executive Engineer",
+        "contact": "+91-80-0001-4402",
+        "sla_hours": 48,
+        "complaint_portal_url": "https://sahaya.bbmp.gov.in"
+      },
+      "image_url": "https://images.unsplash.com/photo-1599740831244-4161b4df0d76?auto=format&fit=crop&w=600&q=80",
+      "grievance_letter": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Electrical Executive Engineer,\nElectrical Division,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'streetlight' - Dangerous hanging wires\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Sector 3, Bangalore\n- **Issue Category:** STREETLIGHT\n- **Reporter's Description:** Hanging power wires near my house represent an extreme hazard.\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **48 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **48-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+      "bilingual_grievance": {
+        "english": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Electrical Executive Engineer,\nElectrical Division,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'streetlight' - Dangerous hanging wires\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Sector 3, Bangalore\n- **Issue Category:** STREETLIGHT\n- **Reporter's Description:** Hanging power wires near my house represent an extreme hazard.\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **48 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **48-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+        "hindi": "### आधिकारिक नागरिक शिकायत पत्र\n\n**सेवा में,**\nमाननीय Electrical Executive Engineer कार्यालय,\nElectrical Division प्रभाग,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nभारत - 560001।\n\n**विषय:** लंबित समस्या 'streetlight' - Dangerous hanging wires के संबंध में तत्काल कार्रवाई हेतु।\n\n**संदर्भ:** संवर्धित नागरिक फोटो एवं जीआईएस (GIS) साक्ष्य (पोर्टल: https://sahaya.bbmp.gov.in)।\n\n**दिनांक:** २३ जून, २०२६\n\n**आदरणीय महोदया/महोदय,**\n\nमैं स्थानीय क्षेत्र में व्याप्त एक गंभीर नागरिक समस्या की ओर आपका त्वरित ध्यान आकर्षित करना चाहता हूँ। यह समस्या निम्नलिखित स्थान पर बनी हुई है:\n- **सटीक स्थान/लैंडमार्क:** Sector 3, Bangalore\n- **शिकायत का प्रकार:** STREETLIGHT\n- **शिकायत का विवरण:** Hanging power wires near my house represent an extreme hazard.\n\nहमने इस समस्या की पुष्टि करने वाले सटीक फोटो साक्ष्य संकलित व अपलोड कर दिए हैं। **Bruhat Bengaluru Mahanagara Palike (BBMP)** के आधिकारिक नागरिक चार्टर और शिकायत निवारण नियमावली के तहत, इस विशिष्ट शिकायत के निवारण हेतु अधिकतम सेवा स्तर समझौता (SLA) अवधि **48 घंटे** स्वीकृत है।\n\nअतः Ward 120 (D'Souza Layout) के एक सजग नागरिक के रूप में, मेरा आपसे विनम्र निवेदन है कि जनहित, जन सुरक्षा और सुगम यातायात को ध्यान में रखते हुए इस **48-घंटे** की तय समय सीमा के भीतर तत्काल मरम्मत कार्य या उचित कार्रवाई सुनिश्चित करने के लिए संबंधित कर्मियों को निर्देशित करें।\n\nसहयोग हेतु कोटिशः धन्यवाद।\n\n**भवदीय/भवदीया,**\nपंजीकृत नागरिक, नगरसेवक (NagarSevak) मंच।"
+      },
+      "created_by": "test_user_123",
+      "id": "report_lgdtrp9r8",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 0,
+        "user_ids": []
+      },
+      "created_at": "2026-06-26T09:10:31.877Z",
+      "updated_at": "2026-06-26T09:10:31.877Z"
+    },
+    {
+      "title": "Dangerous hanging wires with image",
+      "description": "Hanging power wires near my house represent an extreme hazard.",
+      "category": "streetlight",
+      "severity": 4,
+      "status": "filed",
+      "location": {
+        "lat": 12.9716,
+        "lng": 77.5946,
+        "address": "Sector 3, Bangalore",
+        "ward": "Ward 120 (D'Souza Layout)",
+        "zone": "Bengaluru D'Souza"
+      },
+      "jurisdiction": {
+        "body": "Bruhat Bengaluru Mahanagara Palike (BBMP)",
+        "department": "Electrical Division",
+        "officer_name": "Electrical Executive Engineer",
+        "contact": "+91-80-0001-4402",
+        "sla_hours": 48,
+        "complaint_portal_url": "https://sahaya.bbmp.gov.in"
+      },
+      "image_url": "/uploads/image-1782465086039-218230369.jpg",
+      "grievance_letter": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Electrical Executive Engineer,\nElectrical Division,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'streetlight' - Dangerous hanging wires with image\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Sector 3, Bangalore\n- **Issue Category:** STREETLIGHT\n- **Reporter's Description:** Hanging power wires near my house represent an extreme hazard.\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **48 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **48-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+      "bilingual_grievance": {
+        "english": "### FORMAL CIVIL GRIEVANCE PETITION\n\n**To,**\nThe Office of the Electrical Executive Engineer,\nElectrical Division,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nIndia - 560001.\n\n**Subject:** Urgent Public Grievance regarding unresolved Live 'streetlight' - Dangerous hanging wires with image\n\n**Reference:** Citizen Photo & GIS Evidence Uploaded (Portal: https://sahaya.bbmp.gov.in)\n\n**Date:** June 23, 2026\n\n**Respected Madam/Sir,**\n\nI am writing to draw your urgent attention to a hazardous and disruptive civic issue at the following location:\n- **Exact Address/Landmark:** Sector 3, Bangalore\n- **Issue Category:** STREETLIGHT\n- **Reporter's Description:** Hanging power wires near my house represent an extreme hazard.\n\nWe have captured and chemically timestamped photographic evidence confirming the severity of this issue. Under the official Citizen Charter and grievance rules of **Bruhat Bengaluru Mahanagara Palike (BBMP)**, the maximum Service Level Agreement (SLA) time committed for resolving this type of infrastructure grievance is **48 Hours**.\n\nAs a tax-paying citizen and concerned resident of Ward 120 (D'Souza Layout), I formally request you to kindly deploy immediate service personnel to execute necessary repairs and bring this to an orderly resolution before the expiry of the **48-hour** SLA window. Public safety and convenience are currently severely compromised.\n\nThank you. We look forward to your proactive response.\n\n**Yours Sincerely,**\nRegistered Citizen, NagarSevak Platform.",
+        "hindi": "### आधिकारिक नागरिक शिकायत पत्र\n\n**सेवा में,**\nमाननीय Electrical Executive Engineer कार्यालय,\nElectrical Division प्रभाग,\nBruhat Bengaluru Mahanagara Palike (BBMP),\nWard 120 (D'Souza Layout),\nभारत - 560001।\n\n**विषय:** लंबित समस्या 'streetlight' - Dangerous hanging wires with image के संबंध में तत्काल कार्रवाई हेतु।\n\n**संदर्भ:** संवर्धित नागरिक फोटो एवं जीआईएस (GIS) साक्ष्य (पोर्टल: https://sahaya.bbmp.gov.in)।\n\n**दिनांक:** २३ जून, २०२६\n\n**आदरणीय महोदया/महोदय,**\n\nमैं स्थानीय क्षेत्र में व्याप्त एक गंभीर नागरिक समस्या की ओर आपका त्वरित ध्यान आकर्षित करना चाहता हूँ। यह समस्या निम्नलिखित स्थान पर बनी हुई है:\n- **सटीक स्थान/लैंडमार्क:** Sector 3, Bangalore\n- **शिकायत का प्रकार:** STREETLIGHT\n- **शिकायत का विवरण:** Hanging power wires near my house represent an extreme hazard.\n\nहमने इस समस्या की पुष्टि करने वाले सटीक फोटो साक्ष्य संकलित व अपलोड कर दिए हैं। **Bruhat Bengaluru Mahanagara Palike (BBMP)** के आधिकारिक नागरिक चार्टर और शिकायत निवारण नियमावली के तहत, इस विशिष्ट शिकायत के निवारण हेतु अधिकतम सेवा स्तर समझौता (SLA) अवधि **48 घंटे** स्वीकृत है।\n\nअतः Ward 120 (D'Souza Layout) के एक सजग नागरिक के रूप में, मेरा आपसे विनम्र निवेदन है कि जनहित, जन सुरक्षा और सुगम यातायात को ध्यान में रखते हुए इस **48-घंटे** की तय समय सीमा के भीतर तत्काल मरम्मत कार्य या उचित कार्रवाई सुनिश्चित करने के लिए संबंधित कर्मियों को निर्देशित करें।\n\nसहयोग हेतु कोटिशः धन्यवाद।\n\n**भवदीय/भवदीया,**\nपंजीकृत नागरिक, नगरसेवक (NagarSevak) मंच।"
+      },
+      "created_by": "test_user_123",
+      "id": "report_ize9de848",
+      "escalation_history": [],
+      "community_verifications": {
+        "count": 0,
+        "user_ids": []
+      },
+      "created_at": "2026-06-26T09:11:32.882Z",
+      "updated_at": "2026-06-26T09:11:32.882Z"
+    }
+  ],
+  "users": [
+    {
+      "id": "user_rajesh",
+      "name": "Rajesh Kumar",
+      "email": "rajesh.k@nagarsevak.sandbox",
+      "civic_score": 180,
+      "badges": [
+        "First Responder",
+        "Eagle Eye",
+        "Clean Block Leader",
+        "Ward Champion"
+      ],
+      "reports_filed": 6,
+      "reports_verified": 12,
+      "ward": "Ward 42"
+    },
+    {
+      "id": "user_ananya",
+      "name": "Ananya Iyer",
+      "email": "ananya.iyer@nagarsevak.sandbox",
+      "civic_score": 145,
+      "badges": [
+        "Verified Watchdog",
+        "Pothole Patrol"
+      ],
+      "reports_filed": 4,
+      "reports_verified": 9,
+      "ward": "Ward 17"
+    },
+    {
+      "id": "user_amit",
+      "name": "Amit Sharma",
+      "email": "amit.sharma@nagarsevak.sandbox",
+      "civic_score": 95,
+      "badges": [
+        "Green Guardian"
+      ],
+      "reports_filed": 2,
+      "reports_verified": 5,
+      "ward": "Ward 12"
+    },
+    {
+      "id": "user_priya",
+      "name": "Priya Patel",
+      "email": "priya.patel@nagarsevak.sandbox",
+      "civic_score": 220,
+      "badges": [
+        "Veteran Warden",
+        "Scribe",
+        "Community Pillar"
+      ],
+      "reports_filed": 11,
+      "reports_verified": 20,
+      "ward": "Ward 45"
+    },
+    {
+      "id": "user_vikram",
+      "name": "Vikram Hegde",
+      "email": "vikram.h@nagarsevak.sandbox",
+      "civic_score": 80,
+      "badges": [
+        "New Recruit"
+      ],
+      "reports_filed": 1,
+      "reports_verified": 4,
+      "ward": "Ward 10"
+    },
+    {
+      "id": "user_sneha",
+      "name": "Sneha Reddy",
+      "email": "sneha.reddy@nagarsevak.sandbox",
+      "civic_score": 160,
+      "badges": [
+        "Inspector",
+        "Encroachment Analyst"
+      ],
+      "reports_filed": 5,
+      "reports_verified": 14,
+      "ward": "Ward 25"
+    },
+    {
+      "id": "user_rahul",
+      "name": "Rahul Das",
+      "email": "rahul.das@nagarsevak.sandbox",
+      "civic_score": 110,
+      "badges": [
+        "Light Sentinel"
+      ],
+      "reports_filed": 3,
+      "reports_verified": 7,
+      "ward": "Ward 31"
+    },
+    {
+      "id": "user_karan",
+      "name": "Karan Malhotra",
+      "email": "karan.m@nagarsevak.sandbox",
+      "civic_score": 50,
+      "badges": [
+        "Novice Citizen"
+      ],
+      "reports_filed": 1,
+      "reports_verified": 2,
+      "ward": "Ward 42"
+    },
+    {
+      "id": "test_user_123",
+      "name": "Citizen test",
+      "email": "test_user_123@nagarsevak.sandbox",
+      "civic_score": 120,
+      "badges": [
+        "Initiate Warden"
+      ],
+      "reports_filed": 2,
+      "reports_verified": 0,
+      "ward": "Ward 42",
+      "streak": 1,
+      "last_action_date": "2026-06-26"
+    }
+  ]
+}

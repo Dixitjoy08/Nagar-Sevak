@@ -18,46 +18,7 @@ export async function generateBilingualGrievance(
   category: string,
   jurisdiction: any
 ): Promise<BilingualGrievance> {
-  const payload = {
-    title,
-    description,
-    category,
-    jurisdiction
-  };
-
-  return new Promise<BilingualGrievance>((resolve) => {
-    const scriptPath = path.join(process.cwd(), "server", "agents", "grievance.py");
-    // Escaping JSON payload for shell safety
-    const payloadStr = JSON.stringify(payload);
-    
-    // Set up standard exec call. We pass the payload through stdin or safe arg
-    const cmd = `python3 "${scriptPath}"`;
-    const child = exec(cmd, (error, stdout, stderr) => {
-      if (!error && stdout) {
-        try {
-          const parsed = JSON.parse(stdout.trim());
-          if (parsed && parsed.english && parsed.hindi) {
-            console.log("Success generating bilingual grievance via Python agent.");
-            resolve(parsed as BilingualGrievance);
-            return;
-          }
-        } catch (parseError) {
-          console.warn("Could not parse grievance.py JSON output. Falling back to TS template generator.", stdout);
-        }
-      } else {
-        console.warn("Python grievance execution reported code/stderr errors. Executing fallback template:", stderr);
-      }
-
-      // TS native fallback
-      resolve(generateFallbackBilingualLetterTS(title, description, category, jurisdiction));
-    });
-
-    // Write input payload specifically to stdin
-    if (child.stdin) {
-      child.stdin.write(payloadStr);
-      child.stdin.end();
-    }
-  });
+  return generateFallbackBilingualLetterTS(title, description, category, jurisdiction);
 }
 
 function generateFallbackBilingualLetterTS(

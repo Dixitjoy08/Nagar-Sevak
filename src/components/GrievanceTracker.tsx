@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Complaint, RoleType } from "../types";
-import { db, OperationType, handleFirestoreError, doc, updateDoc, arrayUnion, arrayRemove } from "../firebase";
+import { db, OperationType, handleFirestoreError, doc, updateDoc, arrayUnion, arrayRemove } from "../db";
 import { useLanguage } from "./LanguageContext";
 import { 
   CheckCircle2, 

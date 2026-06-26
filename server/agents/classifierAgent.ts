@@ -42,6 +42,10 @@ export async function classifyImageWithGemini(imagePath: string, mimeType: strin
 
     // Read file payload and convert to Base64
     const fileBuffer = fs.readFileSync(imagePath);
+    if (fileBuffer.length < 100) {
+      console.warn(`Uploaded file at ${imagePath} is too small (${fileBuffer.length} bytes) to be a valid photo. Skipping vision classifier API request.`);
+      return null;
+    }
     const base64Data = fileBuffer.toString("base64");
 
     const imagePart = {
@@ -156,13 +160,17 @@ export async function detectDuplicateReportWithGemini(
     let imagePart: any = null;
     if (imagePath && fs.existsSync(imagePath)) {
       const fileBuffer = fs.readFileSync(imagePath);
-      const base64Data = fileBuffer.toString("base64");
-      imagePart = {
-        inlineData: {
-          mimeType: mimeType || "image/jpeg",
-          data: base64Data
-        }
-      };
+      if (fileBuffer.length >= 100) {
+        const base64Data = fileBuffer.toString("base64");
+        imagePart = {
+          inlineData: {
+            mimeType: mimeType || "image/jpeg",
+            data: base64Data
+          }
+        };
+      } else {
+        console.warn(`Duplicate detector: file at ${imagePath} is too small (${fileBuffer.length} bytes) to be a valid photo. Performing text-only duplicate analysis.`);
+      }
     }
 
     const reportsContext = nearbyReports.map(r => 
